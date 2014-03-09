@@ -1,0 +1,32 @@
+{
+  "name": "grunt-init-me",
+  "version": "0.0.0",
+  "description": "web page template (compass + requirejs + mocha + koko)",
+  "main": "template.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fnobi/grunt-init-jsapp.git"
+  },
+  "keywords": [
+    "gruntinit"
+  ],
+  "author": "Fujisawa Shin",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "227c33b1d6b7c91f0f4db066588225b524183d6a",
+  "devDependencies": {
+    "chai": "~1.6.0",
+    "mocha": "~1.9.0",
+    "mkdirp": "~0.3.5",
+    "remove": "~0.1.5",
+    "async": "~0.2.8"
+  },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "async": "~0.2.9",
+    "colors": "~0.6.1"
+  }
+}
