@@ -79,7 +79,7 @@ exports.template = function (grunt, init, done) {
         init.writePackageJSON('src/package.json', pkg);
 
         // write bower.json
-        init.writePackageJSON('src/bower.json', bower);
+        init.writePackageJSON('bower.json', bower);
 
         // npm install & bower install
         shellLines([{
