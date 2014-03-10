@@ -1,7 +1,7 @@
 var escapeFiles = require('./lib/escapeFiles'),
     shellLines = require('./lib/shellLines');
 
-exports.description = 'web page template (compass + auto deps + mocha + koko)';
+exports.description = 'bower component template';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '';
@@ -81,11 +81,14 @@ exports.template = function (grunt, init, done) {
         // write bower.json
         init.writePackageJSON('bower.json', bower);
 
-        // npm install & bower install
+        // npm install & git init
         shellLines([{
             command: 'cd src; npm install',
             message: 'Installing npm dependencies'
-        }], done);
+        }, {
+            command: 'git init',
+            message: 'Initializing git'
+        }]);
     });
 };
 
