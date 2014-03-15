@@ -31,30 +31,32 @@ module.exports = function (grunt) {
         // ejs
         if (env.ejs) {
             grunt.loadNpmTasks('grunt-simple-ejs');
+
+            var options = {
+                name: '{%= name %}'
+            };
     
             config.ejs = config.ejs || {};
-            config.ejs[name] = {
+            config.ejs['README'] = {
                 templateRoot: 'ejs',
-                template: ['*.ejs'],
+                template: 'README.md.ejs',
                 dest: env.sitePath,
-                include: [
-                    'bower_components/ejs-head-modules/*.ejs',
-                    'bower_components/ejs-sns-modules/*.ejs',
-                    'ejs/layout/*.ejs'
-                ],
-                silentInclude: true,
-                options: {}
+                options: options
             };
-            env.tasks.push('ejs:' + name);
+            config.ejs['demo'] = {
+                templateRoot: 'ejs',
+                template: 'index.html.ejs',
+                dest: env.sitePath + 'demo',
+                options: options
+            };
+            env.tasks.push('ejs');
             
             if (env.watch) {
                 config.watch.ejs = {
                     files: [
-                        'ejs/*.ejs',
-                        'ejs/**/*.ejs',
-                        'options.yaml'
+                        'ejs/*.ejs'
                     ],
-                    tasks: ['ejs:' + name]
+                    tasks: ['ejs']
                 };
             }
         }

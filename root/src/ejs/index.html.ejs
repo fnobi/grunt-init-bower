@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title><%= name %> demo</title>
+</head>
+<body>
+
+<!-- include dependencies -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- include <%= name %> -->
+<script src="../<%= name %>.js"></script>
+
+<!-- demo -->
+<script>
+<% include ../js/{%= name %}_demo.js %>
+</script>
+</body>
+</html>
