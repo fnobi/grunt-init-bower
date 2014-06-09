@@ -1,21 +1,16 @@
-{%= name %}
-======
+# <%= name %>
+===============
 
-{%= description %}
+<%= description %>
 
 ## install
 
-### from bower
 ```
-bower install {%= name %}
-```
-
-### from github
-```
-git clone {%= repository %}
+bower install <%= name %>
 ```
 
 ## usage
-```
-<% include ../js/{%= name %}_demo.js %>
+
+```javascript
+<% include ../js///[= name ]//_demo.js %>
 ```
