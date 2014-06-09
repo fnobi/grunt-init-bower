@@ -82,7 +82,6 @@ module.exports = function (grunt) {
             loadPath: [JS + '/*.js'],
             ignore: [],
             forced: [],
-            wrap: true,
             alias: alias
         };
         devTasks.push('auto_deps:' + DEV);
