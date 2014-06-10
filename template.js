@@ -85,6 +85,7 @@ exports.template = function (grunt, init, done) {
         // bower setting
         var bower = {
             name: props.name,
+            description: props.description,
             version: props.version,
             main: 'src/js/' + props.camelCasedName + '.js',
             dependencies: {
