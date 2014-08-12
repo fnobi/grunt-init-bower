@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     var JS = 'src/js';
     var EJS = 'src/ejs';
     var TEST = 'src/test';
+    var DEMO = 'demo';
 
     var useEjs = true;//[ if (with_test) { ]//
     var useTest = true;//[ } ]//
@@ -99,7 +100,7 @@ module.exports = function (grunt) {
 
         var ejsDefaultConfig = {
             templateRoot: EJS,
-            template: ['*.ejs'],
+            template: ['*.ejs', DEMO + '/*.ejs'],
             include: [
                 'bower_components/ejs-head-modules/*.ejs',
                 'bower_components/ejs-sns-modules/*.ejs',
@@ -165,7 +166,7 @@ module.exports = function (grunt) {
         config.koko = config.koko || {};
         config.koko[DEV] = {
             root: path.resolve(devSitePath, path.relative(devHttpPath, '/')),
-            openPath: devHttpPath
+            openPath: path.join(devHttpPath, DEMO)
         };
     
         grunt.registerTask('server', ['koko:' + DEV]);
