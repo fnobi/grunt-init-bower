@@ -1,1 +1,1 @@
-function //[= name ]// () { /* do nothing */ }
+function //[= camelCasedName ]// () { /* do nothing */ }

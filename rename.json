@@ -1,4 +1,4 @@
 {
   "src/js/name.js": "src/js///[= camelCasedName ]//.js",
-  "src/js/name_demo.js": "src/js///[= name ]//_demo.js"
+  "src/js/nameDemo.js": "src/js///[= camelCasedName ]//Demo.js"
 }
