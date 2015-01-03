@@ -57,7 +57,7 @@ exports.template = function (grunt, init, done) {
                 'grunt-este-watch': '~0.1.15',
                 'grunt-contrib-copy': '0.5.0',
                 'grunt-contrib-compass': '0.3.0',
-                'grunt-auto-deps': '0.4.0',
+                'grunt-auto-deps': '0.4.2',
                 'grunt-koko': '0.1.1',
                 'grunt-simple-ejs': '0.3.0',
                 'grunt-mocha-html': '0.1.0',
