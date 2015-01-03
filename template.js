@@ -31,6 +31,12 @@ exports.template = function (grunt, init, done) {
         // init.prompt('author_url'),
         // init.prompt('jquery_version'),
         {
+            name: 'is_class',
+            message: 'Is this class? [Y|n]',
+            default: 'n',
+            validator: /^(Y|n)$/
+        },
+        {
             name: 'with_test',
             message: 'use mocha test. [Y|n]',
             default: 'n',
@@ -64,9 +70,11 @@ exports.template = function (grunt, init, done) {
         };
 
         // add template info to props.
-        props.template_name = 'me';
+        props.template_name = 'bower';
 
         props.project_path = process.cwd();
+
+        props.is_class = props.is_class == 'Y';
 
         props.camelCasedName = (function (name) {
             var parts = name.split(/-|_/);
@@ -78,7 +86,7 @@ exports.template = function (grunt, init, done) {
                 ].join('');
             });
             return camelCased;
-        })(props.name);
+        })((props.is_class ? '-' : '') + props.name);
 
         props.with_test = props.with_test == 'Y';
 
