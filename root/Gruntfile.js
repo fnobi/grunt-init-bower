@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     // dirs
     var JS = 'src/js';
     var EJS = 'src/ejs';
-    var TEST = 'src/test';
+    var TEST = 'test';
     var DEMO = 'demo';
 
     var useEjs = true;//[ if (with_test) { ]//
@@ -133,8 +133,9 @@ module.exports = function (grunt) {
     
         config.mocha_html = config.mocha_html || {};
         config.mocha_html[DEV] = {
-            src   : [ path.resolve(devSitePath, JS, '//[= camelCasedName ]//.js') ],
-            test  : [ TEST + '/*-test.js' ],
+            html: TEST + '/' + DEV + '.html',
+            src: [ path.resolve(devSitePath, JS, '//[= camelCasedName ]//.js') ],
+            test: [ TEST + '/*-test.js' ],
             assert : 'chai'
         };
         devTasks.push('mocha_html');

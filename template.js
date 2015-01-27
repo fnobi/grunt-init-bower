@@ -39,7 +39,7 @@ exports.template = function (grunt, init, done) {
         {
             name: 'with_test',
             message: 'use mocha test. [Y|n]',
-            default: 'n',
+            default: 'Y',
             validator: /^(Y|n)$/
         }
     ], function(err, props) {
@@ -103,7 +103,7 @@ exports.template = function (grunt, init, done) {
                 'Gruntfile.js',
                 'package.json',
                 'node_modules',
-                'src/test',
+                'test',
                 'src/ejs',
                 'src/options.yaml'
             ]
