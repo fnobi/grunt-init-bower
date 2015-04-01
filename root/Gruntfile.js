@@ -4,8 +4,8 @@ module.exports = function (grunt) {
 
     // dirs
     var JS = 'src/js';
-    var EJS = 'src/ejs';
-    var TEST = 'test';
+    var EJS = 'src/ejs';//[ if (with_test) { ]//
+    var TEST = 'test';//[ } ]//
     var DEMO = 'demo';
 
     var useEjs = true;//[ if (with_test) { ]//
