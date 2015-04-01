@@ -97,7 +97,7 @@ exports.template = function (grunt, init, done) {
             version: props.version,
             main: 'src/js/' + props.camelCasedName + '.js',
             dependencies: {
-                'jquery': '~1.10.*'
+                'jquery': '1.*'
             },
             ignore: [
                 'Gruntfile.js',
